@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Tara - Launching Soon!</title>
+    
+    <!-- Google Fonts: Playfair Display for the brand, Poppins for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* 
+        ========================================
+        CSS Variables & Global Styles
+        ========================================
+        */
+        :root {
+            --bg-color: #F8F4EC; /* Creamy background from image */
+            --text-color: #4A4A4A;
+            --primary-blue: #2A6B9C; /* "Launching" text color */
+            --primary-orange: #E98B3A; /* "Soon" text color */
+            --accent-pink: #D96A8D; /* House color */
+            --white-color: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            overflow: hidden; /* Hide overflow from animations */
+        }
+
+        /* 
+        ========================================
+        Main Container & Content Styling
+        ========================================
+        */
+        .container {
+            max-width: 600px;
+            width: 100%;
+            padding: 40px;
+            background-color: var(--white-color);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+            
+            /* Entry Animation */
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn-up 1s ease-out 0.5s forwards;
+        }
+
+        /* NEW: Brand Name - Larger and uses a stylish font to match the image */
+        .brand-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .launch-image {
+            max-width: 350px;
+            width: 80%;
+            height: auto;
+            margin: 0 auto 25px;
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+
+        p.subtitle {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 40px; /* Increased margin to give space */
+            opacity: 0.8;
+        }
+
+        /* 
+        ========================================
+        NEW: Instagram Call-to-Action
+        ========================================
+        */
+        .instagram-cta a {
+            display: inline-flex; /* Use flexbox for alignment */
+            align-items: center;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary-orange);
+            text-decoration: none;
+            padding: 12px 24px;
+            border: 2px solid var(--primary-orange);
+            border-radius: 50px;
+            transition: all 0.3s ease;
+        }
+
+        .instagram-cta a:hover {
+            background-color: var(--primary-orange);
+            color: var(--white-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 139, 58, 0.25);
+        }
+
+        .instagram-cta svg {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px; /* Space between icon and text */
+        }
+        
+        /* 
+        ========================================
+        Animation Keyframes
+        ========================================
+        */
+        @keyframes fadeIn-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* 
+        ========================================
+        Responsive Design
+        ========================================
+        */
+        @media (max-width: 480px) {
+            .brand-logo {
+                font-size: 2.2rem;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        
+        <!-- === 1. Brand Name (Updated Font & Size) === -->
+        <div class="brand-logo">House of Tara</div>
+
+        <!-- === 2. Launch Image === -->
+        <img src="images/launch.jpeg" alt="Launching Soon!" class="launch-image">
+
+        <!-- === 3. Headline & Subtitle === -->
+        <h1>A New Style is Coming</h1>
+        <p class="subtitle">
+            We're stitching together something amazing. Be the first to see our collection drop!
+        </p>
+
+        <!-- === 4. Instagram Call-to-Action (Replaces Form) === -->
+        <!-- IMPORTANT: Update the href link to your Instagram profile! -->
+        <div class="instagram-cta">
+            <a href="https://instagram.com/in_the_making_of_dream" target="_blank" rel="noopener noreferrer">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                Follow Us on Instagram
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>
